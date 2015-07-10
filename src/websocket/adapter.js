@@ -23,7 +23,7 @@ function checkPermissionFor( state, user, context, action ) {
 }
 
 function getUserString( user ) {
-	return user.name ? user.name : JSON.stringify( user );
+	return user.name || user.username || user.id || JSON.stringify( user );
 }
 
 function start( state ) {

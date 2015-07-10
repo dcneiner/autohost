@@ -102,7 +102,7 @@ function getActionMetadata( state, resource, actionName, action, meta, resources
 }
 
 function getUserString( user ) {
-	return user.name ? user.name : JSON.stringify( user );
+	return user.name || user.username || user.id || JSON.stringify( user );
 }
 
 function hasPrefix( state, url ) {
